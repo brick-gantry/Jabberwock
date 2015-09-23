@@ -1,0 +1,38 @@
+﻿<Window x:Class="Jabberwock.EditProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jabberwock"
+        mc:Ignorable="d"
+        Title="Edit Profile"
+        SizeToContent="WidthAndHeight"
+        ShowInTaskbar="False">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbProfiles"
+                 Width="200" Height="300" Margin="5"
+                 Grid.RowSpan="3" 
+                 ItemsSource="{Binding Profiles}" 
+                 SelectedIndex="{Binding SelectedProfileIndex}"/>
+        <Button x:Name="bEdit" Content="Edit"
+                Margin="5" VerticalAlignment="Top"
+                Grid.Column="1"
+                Click="bEdit_Click"/>
+        <Button x:Name="bDelete" Content="Delete"
+                Margin="5" VerticalAlignment="Top"
+                Grid.Column="1" Grid.Row="1"
+                Click="bDelete_Click"/>
+    </Grid>
+</Window>

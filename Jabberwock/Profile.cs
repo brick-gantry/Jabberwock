@@ -8,8 +8,11 @@ namespace Jabberwock
 {
     public class Profile
     {
-        public string Name { get; set; }
         public string Username { get; set; }
         public string IconPath { get; set; }
+        public override string ToString()
+        {
+            return Username;
+        }
     }
 }
