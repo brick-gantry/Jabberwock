@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Jabberwock
 {
@@ -22,7 +9,6 @@ namespace Jabberwock
     {
         public MainWindow()
         {
-            ViewModel.LoadProfiles();
             InitializeComponent();
         }
 
@@ -33,7 +19,7 @@ namespace Jabberwock
 
         }
 
-        private void miAdd_Click(object sender, RoutedEventArgs e)
+        private void miAddProfile_Click(object sender, RoutedEventArgs e)
         {
             var window = new CreateProfileWindow();
             window.ShowDialog();
@@ -43,10 +29,25 @@ namespace Jabberwock
             }
         }
 
-        private void miEdit_Click(object sender, RoutedEventArgs e)
+        private void miEditProfile_Click(object sender, RoutedEventArgs e)
         {
             var window = new EditProfileWindow();
             window.ShowDialog();
+        }
+
+        private void miAddChannel_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new CreateChannelWindow();
+            window.ShowDialog();
+            if(window.CreateClicked)
+            {
+                vm.Channels.Add(window.DataContext as ChannelOrDM);
+            }
+        }
+
+        private void miEditChannel_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

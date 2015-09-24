@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-c:\users\for example john\documents\visual studio 2015\Projects\Jabberwock\Jabberwock\obj\Debug\
+C:\Users\for example John\Documents\Visual Studio 2015\Projects\Jabberwock\Jabberwock\obj\Debug\
 Jabberwock
 none
 false
 DEBUG;TRACE
-c:\users\for example john\documents\visual studio 2015\Projects\Jabberwock\Jabberwock\App.xaml
-31216084772
+C:\Users\for example John\Documents\Visual Studio 2015\Projects\Jabberwock\Jabberwock\App.xaml
+4804423064
 
-13-1351852992
-161208753586
-CreateProfileWindow.xaml;EditProfileWindow.xaml;MainWindow.xaml;
+161097611784
+251868330375
+CreateChannelWindow.xaml;CreateProfileWindow.xaml;EditProfileWindow.xaml;MainWindow.xaml;
 
-True
+False
 
