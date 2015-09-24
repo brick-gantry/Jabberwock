@@ -12,9 +12,13 @@
     </Window.DataContext>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="P_rofile">
-                <MenuItem x:Name="miAdd" Header="A_dd" Click="miAdd_Click"/>
-                <MenuItem x:Name="miEdit" Header="E_dit" Click="miEdit_Click"/>
+            <MenuItem Header="Profile">
+                <MenuItem x:Name="miAddProfile" Header="Add" Click="miAddProfile_Click"/>
+                <MenuItem x:Name="miEditProfile" Header="Edit" Click="miEditProfile_Click"/>
+            </MenuItem>
+            <MenuItem Header="Channel">
+                <MenuItem x:Name="miAddChannel" Header="Add" Click="miAddChannel_Click"/>
+                <MenuItem x:Name="miEditChannel" Header="Edit" Click="miEditChannel_Click"/>
             </MenuItem>
         </Menu>
         <Grid>
@@ -30,10 +34,17 @@
                 <TextBlock Text="Profile:" Margin="5"/>
                 <ComboBox x:Name="cbProfile" 
                       HorizontalAlignment="Left" 
-                      Width="200" 
+                      Width="150" 
                       Margin="5" 
                       ItemsSource="{Binding Profiles}" 
                       SelectedIndex="{Binding SelectedProfileIndex}"/>
+                <TextBlock Text="Channel/DM:" Margin="5"/>
+                <ComboBox x:Name="cbChannel"
+                          HorizontalAlignment="Left"
+                          Width="100"
+                          Margin="5"
+                          ItemsSource="{Binding Channels}"
+                          SelectedIndex="{Binding SelectedChannelIndex}"/>
             </StackPanel>
             <TextBox x:Name="tbInput" 
                  Width="400" Height="120" Margin="5"
